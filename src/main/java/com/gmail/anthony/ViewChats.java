@@ -27,5 +27,7 @@ public class ViewChats extends VerticalLayout {
 		Chat chat = new Chat() ;
 		chat.setNom(tfChat.getValue());
 		MainView.getService().donnerChat(u, chat);
+		lbChats.setItems(u.getSesChats());
+		tfChat.clear();
 	}
 }
